@@ -201,6 +201,31 @@ return view.extend({
 		}
 
 		/*
+		 * Language & Style
+		 */
+
+		o = s.taboption('language', form.ListValue, '_lang', _('Language'))
+		o.uciconfig = 'luci';
+		o.ucisection = 'main';
+		o.ucioption = 'lang';
+		o.value('auto');
+
+		var k = Object.keys(uci.get('luci', 'languages') || {}).sort();
+		for (var i = 0; i < k.length; i++)
+			if (k[i].charAt(0) != '.')
+				o.value(k[i], uci.get('luci', 'languages', k[i]));
+
+		o = s.taboption('language', form.ListValue, '_mediaurlbase', _('Design'))
+		o.uciconfig = 'luci';
+		o.ucisection = 'main';
+		o.ucioption = 'mediaurlbase';
+
+		var k = Object.keys(uci.get('luci', 'themes') || {}).sort();
+		for (var i = 0; i < k.length; i++)
+			if (k[i].charAt(0) != '.')
+				o.value(uci.get('luci', 'themes', k[i]), k[i]);
+
+		/*
 		 * NTP
 		 */
 
