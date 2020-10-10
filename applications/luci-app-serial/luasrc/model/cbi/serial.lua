@@ -3,6 +3,10 @@
 -- Licensed to the public under the Apache License 2.0.
 
 m = Map("ser2net", translate("Serial"), translate("Serial port proxy"))
+m.apply_on_parse = true
+m.on_after_apply = function(self)
+	io.popen("/etc/init.d/ser2net restart")
+end
 
 
 
