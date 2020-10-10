@@ -1,0 +1,47 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Serial"
+msgstr "Serial"
+
+msgid "Serial port proxy"
+msgstr "Serial port proxy"
+
+msgid "Baudrate"
+msgstr "Baudrate"
+
+msgid "DataBits"
+msgstr "DataBits"
+
+msgid "7bits"
+msgstr "7bits"
+
+msgid "8bits"
+msgstr "8bits"
+
+msgid "9bits"
+msgstr "9bits"
+
+msgid "Parity"
+msgstr "Parity"
+
+msgid "Even"
+msgstr "Even"
+
+msgid "Odd"
+msgstr "Odd"
+
+msgid "StopBits"
+msgstr "StopBits"
+
+msgid "1bit"
+msgstr "1bit"
+
+msgid "2bits"
+msgstr "2bits"
+
+msgid "Interactive Port Settings"
+msgstr "Interactive Port Settings"
+
+msgid "Monitor Port Settings"
+msgstr "Monitor Port Settings"

@@ -4,21 +4,61 @@
 
 m = Map("ser2net", translate("Serial"), translate("Serial port proxy"))
 
-g = m:section(NamedSection, "global", "ser2net", "")
-g.addremove = false
-g.anonymous = false
 
-g1 = g:option(Flag, "enabled", "enable", translate("enable"))
 
-d = m:section(TypedSection, "default", "")
-d.addremove = false
-d.anonymous = true
+g = m:section(NamedSection, "global", "ser2net", translate("Global Settings"))
 
-d1 = d:option(ListValue, "speed", "Baudrate", translate("Baudrate"))
-d1:value("300",   "300")
-d1:value("600",   "600")
-d1:value("1200",  "1200")
-d1:value("2400",  "2400")
-d1:value("4800",  "4800")
-d1:value("9600",  "9600")
-d1:value("19200", "19200")
+g1 = g:option(Flag, "enabled", translate("Enable"), translate(""))
+g1.rmempty = false
+
+
+
+d = m:section(NamedSection, "default", "default", translate(""))
+
+d1 = d:option(ListValue, "speed", translate("Baudrate"), translate(""))
+d1:value("300",    translate("300"))
+d1:value("600",    translate("600"))
+d1:value("1200",   translate("1200"))
+d1:value("2400",   translate("2400"))
+d1:value("4800",   translate("4800"))
+d1:value("9600",   translate("9600"))
+d1:value("19200",  translate("19200"))
+d1:value("38400",  translate("38400"))
+d1:value("57600",  translate("57600"))
+d1:value("115200", translate("115200"))
+
+d2 = d:option(ListValue, "databits", translate("DataBits"), translate(""))
+d2:value("7", translate("7bits"))
+d2:value("8", translate("8bits"))
+d2:value("9", translate("9bits"))
+
+d3 = d:option(ListValue, "parity", translate("Parity"), translate(""))
+d3:value("none", translate("None"))
+d3:value("even", translate("Even"))
+d3:value("odd", translate("Odd"))
+
+d4 = d:option(ListValue, "stopbits", translate("StopBits"), translate(""))
+d4:value("1", translate("1bit"))
+d4:value("2", translate("2bits"))
+
+
+
+i = m:section(NamedSection, "interactive", "proxy", translate("Interactive Port Settings"))
+
+i1 = i:option(Flag, "enabled", translate("Enable"), translate(""))
+i1.rmempty = false
+
+i2 = i:option(Value, "port", translate("Port"), translate(""))
+i2.maxlength = 5
+
+o = m:section(NamedSection, "monitor", "proxy", translate("Monitor Port Settings"))
+
+o1 = o:option(Flag, "enabled", translate("Enable"), translate(""))
+o1.rmempty = false
+
+o2 = o:option(Value, "port", translate("Port"), translate(""))
+o2.maxlength = 5
+
+
+
+return m

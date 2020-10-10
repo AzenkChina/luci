@@ -1,0 +1,47 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Serial"
+msgstr "串口"
+
+msgid "Serial port proxy"
+msgstr "串口代理"
+
+msgid "Baudrate"
+msgstr "波特率"
+
+msgid "DataBits"
+msgstr "数据位"
+
+msgid "7bits"
+msgstr "7位"
+
+msgid "8bits"
+msgstr "8位"
+
+msgid "9bits"
+msgstr "9位"
+
+msgid "Parity"
+msgstr "校验位"
+
+msgid "Even"
+msgstr "偶校验"
+
+msgid "Odd"
+msgstr "奇校验"
+
+msgid "StopBits"
+msgstr "停止位"
+
+msgid "1bit"
+msgstr "1位"
+
+msgid "2bits"
+msgstr "2位"
+
+msgid "Interactive Port Settings"
+msgstr "交互端口配置"
+
+msgid "Monitor Port Settings"
+msgstr "监听端口配置"
