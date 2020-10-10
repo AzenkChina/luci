@@ -6648,8 +6648,11 @@ msgstr "« 后退"
 msgid "Serial"
 msgstr "串口"
 
-msgid "Serial port proxy"
+msgid "Serial Port Proxy"
 msgstr "串口代理"
+
+msgid "Here you can configure the serial ports and their forward ports."
+msgstr "此处配置串口通信参数以及其转发端口。"
 
 msgid "Baudrate"
 msgstr "波特率"

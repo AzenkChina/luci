@@ -2,7 +2,7 @@
 -- Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
 -- Licensed to the public under the Apache License 2.0.
 
-m = Map("ser2net", translate("Serial"), translate("Serial port proxy"))
+m = Map("ser2net", translate("Serial Port Proxy"), translate("Here you can configure the serial ports and their forward ports."))
 m.apply_on_parse = true
 m.on_after_apply = function(self)
 	io.popen("/etc/init.d/ser2net restart")
