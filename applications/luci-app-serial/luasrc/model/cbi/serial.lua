@@ -54,7 +54,7 @@ i1.rmempty = false
 
 i2 = i:option(Value, "port", translate("Port"))
 i2.maxlength = 5
-i2.datatype = 'port'
+i2.datatype = "port"
 
 o = m:section(NamedSection, "monitor", "proxy", translate("Monitor Port Settings"))
 
@@ -63,6 +63,6 @@ o1.rmempty = false
 
 o2 = o:option(Value, "port", translate("Port"))
 o2.maxlength = 5
-o2.datatype = 'port'
+o2.datatype = "port"
 
 return m
