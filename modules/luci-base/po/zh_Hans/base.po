@@ -6693,6 +6693,69 @@ msgstr "交互端口配置"
 msgid "Monitor Port Settings"
 msgstr "监听端口配置"
 
+msgid "Collector"
+msgstr "采集器"
+
+msgid "Data Collect Service"
+msgstr "数据采集服务"
+
+msgid "Here you can define all parameters of the data collector program."
+msgstr "此处配置采集服务程序的所有运行参数"
+
+msgid "Collect period"
+msgstr "采集周期"
+
+msgid "5 minutes"
+msgstr "5分钟"
+
+msgid "10 minutes"
+msgstr "10分钟"
+
+msgid "15 minutes"
+msgstr "15分钟"
+
+msgid "30 minutes"
+msgstr "30分钟"
+
+msgid "60 minutes"
+msgstr "60分钟"
+
+msgid "Client address"
+msgstr "客户地址"
+
+msgid "Server logical address"
+msgstr "逻辑地址"
+
+msgid "Server physical address"
+msgstr "物理地址"
+
+msgid "Address mode"
+msgstr "地址模式"
+
+msgid "1 byte"
+msgstr "1字节"
+
+msgid "2 bytes"
+msgstr "2字节"
+
+msgid "4 bytes"
+msgstr "4字节"
+
+msgid "Access level"
+msgstr "访问权限"
+
+msgid "Element"
+msgstr "元素"
+
+msgid "Class ID"
+msgstr "类标识"
+
+msgid "OBIS"
+msgstr "OBIS"
+
+msgid "Attribute Index"
+msgstr "属性索引"
+
 #~ msgid "Configuration has been applied."
 #~ msgstr "配置已应用。"
 
