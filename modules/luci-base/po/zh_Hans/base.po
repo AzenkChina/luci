@@ -6700,7 +6700,7 @@ msgid "Data Collect Service"
 msgstr "数据采集服务"
 
 msgid "Here you can define all parameters of the data collector program."
-msgstr "此处配置采集服务程序的所有运行参数"
+msgstr "此处配置采集服务程序的所有运行参数。"
 
 msgid "Collect period"
 msgstr "采集周期"
@@ -6755,6 +6755,9 @@ msgstr "OBIS"
 
 msgid "Attribute Index"
 msgstr "属性索引"
+
+msgid "Read by Cycle"
+msgstr "按周期读取"
 
 #~ msgid "Configuration has been applied."
 #~ msgstr "配置已应用。"

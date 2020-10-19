@@ -1,9 +1,6 @@
 -- Copyright 2008 Steven Barth <steven@midlink.org>
 -- Licensed to the public under the Apache License 2.0.
 
-local wa = require "luci.tools.webadmin"
-local fs = require "nixio.fs"
-
 m = Map("collector", translate("Data Collect Service"),
 	translate("Here you can define all parameters of the data collector program."))
 m.apply_on_parse = true
@@ -58,8 +55,10 @@ e2:value("1",  "Data")
 e2:value("3",  "Register")
 e2:value("4",  "Extended Register")
 e2:value("5",  "Demand Register")
+e2:value("6",  "Register Activation")
 e2:value("7",  "Profile Generic")
 e2:value("8",  "Clock")
+e2:value("63", "Status Mapping")
 
 e3 = e:option(Value, "obis", translate("OBIS"))
 e3.rmempty = false
@@ -73,6 +72,7 @@ e4.rmempty = false
 e4.datatype = "and(uinteger,min(1),max(24))"
 
 e5 = e:option(Flag, "delta", translate("Read by Cycle"))
+e5.default = "1"
 e5.rmempty = false
 e5:depends({class="7"})
 
