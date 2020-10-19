@@ -6765,6 +6765,12 @@ msgstr "加密密钥"
 msgid "Authentication key"
 msgstr "认证密钥"
 
+msgid "At least 8 hexadecimal characters"
+msgstr "至少8个十六进制字符"
+
+msgid "Please enter 16 hexadecimal characters"
+msgstr "输入16个十六进制字符"
+
 #~ msgid "Configuration has been applied."
 #~ msgstr "配置已应用。"
 

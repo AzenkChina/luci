@@ -42,23 +42,59 @@ g7:value("none", translate("None"))
 g7:value("low",  translate("Password"))
 g7:value("high", translate("Encryption"))
 
-g8 = g:option(Value, "password", translate("Password"))
-g8.rmempty = false
+g8 = g:option(Value, "password", translate("Password"), translate("At least 8 hexadecimal characters"))
 g8.maxlength = 40
 g8.size = 40
+g8.default = "3030303030303030"
 g8:depends({level="low"})
+function g8:validate(value)
+	if(value == nil)
+	then
+		return true
+	else
+		if(value:len() < 16)
+		then
+			return false
+		end
+	end
+    return value:match("^[a-fA-F0-9]+$")
+end
 
-g9 = g:option(Value, "ekey", translate("Encryption key"))
-g9.rmempty = false
+g9 = g:option(Value, "ekey", translate("Encryption key"), translate("Please enter 16 hexadecimal characters"))
 g9.size = 40
 g9.maxlength = 32
+g9.default = "30303030303030303030303030303030"
 g9:depends({level="high"})
+function g9:validate(value)
+	if(value == nil)
+	then
+		return true
+	else
+		if(value:len() ~= 32)
+		then
+			return false
+		end
+	end
+    return value:match("^[a-fA-F0-9]+$")
+end
 
-g10 = g:option(Value, "akey", translate("Authentication key"))
-g10.rmempty = false
+g10 = g:option(Value, "akey", translate("Authentication key"), translate("Please enter 16 hexadecimal characters"))
 g10.size = 40
 g10.maxlength = 32
+g10.default = "30303030303030303030303030303030"
 g10:depends({level="high"})
+function g10:validate(value)
+	if(value == nil)
+	then
+		return true
+	else
+		if(value:len() ~= 32)
+		then
+			return false
+		end
+	end
+    return value:match("^[a-fA-F0-9]+$")
+end
 
 e = m:section(TypedSection, "element", translate("Element"))
 e.addremove = true
@@ -91,7 +127,6 @@ e4.datatype = "and(uinteger,min(1),max(32))"
 
 e5 = e:option(Flag, "delta", translate("Read by Cycle"))
 e5.default = "1"
-e5.rmempty = false
 e5:depends({class="7"})
 
 return m
