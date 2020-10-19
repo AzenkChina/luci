@@ -14,11 +14,11 @@ g1 = g:option(Flag, "enable", translate("Enabled"))
 g1.rmempty = false
 
 g2 = g:option(ListValue, "period", translate("Collect period"))
-g2:value("5",  translate("5 minutes")
-g2:value("10", translate("10 minutes")
-g2:value("15", translate("15 minutes")
-g2:value("30", translate("30 minutes")
-g2:value("60", translate("60 minutes")
+g2:value("5",  translate("5 minutes"))
+g2:value("10", translate("10 minutes"))
+g2:value("15", translate("15 minutes"))
+g2:value("30", translate("30 minutes"))
+g2:value("60", translate("60 minutes"))
 
 g3 = g:option(Value, "client", translate("Client address"))
 g3.rmempty = false

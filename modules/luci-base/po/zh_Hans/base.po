@@ -6759,6 +6759,12 @@ msgstr "属性索引"
 msgid "Read by Cycle"
 msgstr "按周期读取"
 
+msgid "Encryption key"
+msgstr "加密密钥"
+
+msgid "Authentication key"
+msgstr "认证密钥"
+
 #~ msgid "Configuration has been applied."
 #~ msgstr "配置已应用。"
 
