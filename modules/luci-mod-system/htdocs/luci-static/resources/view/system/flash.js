@@ -167,24 +167,6 @@ return view.extend({
 			.finally(function() { btn.firstChild.data = _('Upload archive...') });
 	},
 
-	handleBlock: function(hostname, ev) {
-		var mtdblock = dom.parent(ev.target, '.cbi-section').querySelector('[data-name="mtdselect"] select').value;
-		var form = E('form', {
-			'method': 'post',
-			'action': L.env.cgi_base + '/cgi-download',
-			'enctype': 'application/x-www-form-urlencoded'
-		}, [
-			E('input', { 'type': 'hidden', 'name': 'sessionid', 'value': rpc.getSessionID() }),
-			E('input', { 'type': 'hidden', 'name': 'path',      'value': '/dev/mtdblock%d'.format(mtdblock) }),
-			E('input', { 'type': 'hidden', 'name': 'filename',  'value': '%s.mtd%d.bin'.format(hostname, mtdblock) })
-		]);
-
-		ev.currentTarget.parentNode.appendChild(form);
-
-		form.submit();
-		form.parentNode.removeChild(form);
-	},
-
 	handleSysupgrade: function(storage_size, ev) {
 		return ui.uploadFile('/tmp/firmware.bin', ev.target.firstChild)
 			.then(L.bind(function(btn, reply) {
@@ -380,24 +362,6 @@ return view.extend({
 		o.inputstyle = 'action important';
 		o.inputtitle = _('Upload archive...');
 		o.onclick = L.bind(this.handleRestore, this);
-
-
-		if (procmtd.length) {
-			o = s.option(form.SectionValue, 'actions', form.NamedSection, 'actions', 'actions', _('Save mtdblock contents'), _('Click "Save mtdblock" to download specified mtdblock file. (NOTE: THIS FEATURE IS FOR PROFESSIONALS! )'));
-			ss = o.subsection;
-
-			o = ss.option(form.ListValue, 'mtdselect', _('Choose mtdblock'));
-			procmtd.split(/\n/).forEach(function(ln) {
-				var match = ln.match(/^mtd(\d+): .+ "(.+?)"$/);
-				if (match)
-					o.value(match[1], match[2]);
-			});
-
-			o = ss.option(form.Button, 'mtddownload', _('Download mtdblock'));
-			o.inputstyle = 'action important';
-			o.inputtitle = _('Save mtdblock');
-			o.onclick = L.bind(this.handleBlock, this, hostname);
-		}
 
 
 		o = s.option(form.SectionValue, 'actions', form.NamedSection, 'actions', 'actions', _('Flash new firmware image'),
