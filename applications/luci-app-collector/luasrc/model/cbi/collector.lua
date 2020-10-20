@@ -10,7 +10,7 @@ end
 
 g = m:section(NamedSection, "globals", "collector", translate("Global Settings"))
 
-g1 = g:option(Flag, "enable", translate("Enabled"))
+g1 = g:option(Flag, "enabled", translate("Enable"))
 g1.rmempty = false
 
 g2 = g:option(ListValue, "period", translate("Collect period"))
