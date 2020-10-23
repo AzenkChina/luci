@@ -5,7 +5,7 @@ m = Map("collector", translate("Data Collect Service"),
 	translate("Here you can define all parameters of the data collector program."))
 m.apply_on_parse = true
 m.on_after_apply = function(self)
-	
+	io.popen("/etc/init.d/collector restart")
 end
 
 g = m:section(NamedSection, "globals", "collector", translate("Global Settings"))
