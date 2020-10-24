@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for serialproxy
-LUCI_DEPENDS:=+luci-compat +serialproxy
+LUCI_DEPENDS:=+luci-compat +luci-app-collector +serialproxy
 
 include ../../luci.mk
 
