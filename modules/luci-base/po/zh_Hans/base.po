@@ -6705,6 +6705,9 @@ msgstr "此处配置采集服务程序的所有运行参数。"
 msgid "Collect period"
 msgstr "采集周期"
 
+msgid "1 minutes"
+msgstr "1分钟"
+
 msgid "5 minutes"
 msgstr "5分钟"
 

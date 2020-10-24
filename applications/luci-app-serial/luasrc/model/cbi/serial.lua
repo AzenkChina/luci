@@ -6,6 +6,7 @@ m = Map("ser2net", translate("Serial Port Proxy"), translate("Here you can confi
 m.apply_on_parse = true
 m.on_after_apply = function(self)
 	io.popen("/etc/init.d/ser2net restart")
+	io.popen("/etc/init.d/collector restart")
 end
 
 

@@ -14,6 +14,7 @@ g1 = g:option(Flag, "enabled", translate("Enable"))
 g1.rmempty = false
 
 g2 = g:option(ListValue, "period", translate("Collect period"))
+g2:value("1",  translate("1 minutes"))
 g2:value("5",  translate("5 minutes"))
 g2:value("10", translate("10 minutes"))
 g2:value("15", translate("15 minutes"))
