@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=LuCI Support for Data Collector Unit
-LUCI_DEPENDS:=+luci-compat
+LUCI_DEPENDS:=+luci-compat +luci-app-serial
 
 include ../../luci.mk
 
