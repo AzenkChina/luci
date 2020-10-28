@@ -6774,6 +6774,9 @@ msgstr "至少8个十六进制字符"
 msgid "Please enter 16 hexadecimal characters"
 msgstr "输入16个十六进制字符"
 
+msgid "Terminal"
+msgstr "终端"
+
 #~ msgid "Configuration has been applied."
 #~ msgstr "配置已应用。"
 
