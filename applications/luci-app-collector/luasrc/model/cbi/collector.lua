@@ -127,7 +127,7 @@ e4.rmempty = false
 e4.datatype = "and(uinteger,min(1),max(32))"
 
 e5 = e:option(Flag, "delta", translate("Read by Cycle"))
-e5.default = "1"
+e5.default = "0"
 e5:depends({class="7"})
 
 return m
